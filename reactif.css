@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial,Montserrat;
+    height: 50vh;
+    background-image:url(https://images.unsplash.com/photo-1544604860-206456f08229?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+    background-size: cover;
+    background-position: center;  
+    background-repeat: no-repeat;
+}
+
+li{
+list-style-type: none;
+}
+a{
+text-decoration: none;
+color: #fff;
+font-size: 1rem;      
+}
+a:hover{
+color: yellow;
+}
+/*Header*/
+header{
+position: relative;    
+}
+.navbar{
+width: 100%;
+height: 60px;
+margin: 0 auto;    
+display: flex;
+align-items: center;
+justify-content: space-around; 
+background-color: rgb(70, 196, 70);  
+}
+.navbar .logo a{
+font-size: 1.5rem;
+font-weight: bold;    
+}
+.navbar .links{
+display: flex;
+column-gap: 2rem;
+flex-flow: wrap;        
+}
+
+.navbar .toggle-btn{
+cursor: pointer;
+display: none;    
+}
+
+/*RESPONSIVE DESIGN*/
+@media screen and (max-width: 768px) {
+    .navbar .links{
+        display: none;
+    }
+    .navbar{
+        background-color: rgba(51, 51, 51, 0.54);
+    }
+    .navbar .toggle-btn{
+        display: block;
+        position:absolute;
+        right: 5px;
+    }
+    header .legend p{
+        display: none;
+    }
+     header .legend h2{
+        position: relative;
+         top: 5rem;
+    }
+    .dropdown-menu{
+         display: block;
+    }
+    
+}
+
+@media screen and (max-width: 576px) {
+    .dropdown-menu{
+         min-width: 200px;
+        left: 6rem;
+    }
+    
+}
+@media screen and (min-width: 768.5px) {
+    .dropdown-menu{
+        display: none;
+    }
+    
+}
+
+/*DROPDOWN MENU*/
+.dropdown-menu{
+/*display: none;*/
+position: absolute;
+right: 1rem;
+top: 60px;
+height: 0;    
+width: 130px;
+background-color: rgba(255, 255, 255, 0.3);
+backdrop-filter: blur(14px); /*Flou Arrier-Plan*/;
+border-radius: 10px;
+overflow: hidden;  
+transition:.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);   
+}
+
+.dropdown-menu.open{
+height: 210px;    
+}
+.dropdown-menu li{
+padding: 0.7rem;
+display: flex;
+justify-content:center;
+align-items: center;
+}
+
+.legend{
+text-align: center; 
+color: #fff;    
+top: 180px;    ;
+transform: translateX(0%);
+transform: translateY(200%);
+text-transform: capitalize;
+font-family: Montserrat,Arial,sans-serif;
+}
+.awesome{
+position: relative;
+top: 34rem;   
+}
+.icon-flex{
+display: flex; 
+}
+i{
+font-size: 2rem;
+padding: 10px;    
+}
+.small{
+font-size: 15px;    
+}
+.layout-1{
+flex-flow: wrap;    
+display: flex;
+justify-content: space-evenly; 
+}
+.layout-2{
+flex-flow: wrap;    
+position: relative;
+top: 30px;    
+display: flex;
+justify-content: space-evenly;  
+text-align: center;
+}
+.awesome .text-center{
+text-align: center;
+padding-bottom: 20px;    
+}
+.background{
+position: relative;
+top: 40rem;    
+}
+.mini-bg {
+    width: 100%;
+    height: 170px;
+    background-color: darkgreen;
+    text-align: center;
+    padding: 25px;
+    color: #fff;
+}
+.mini-bg h3{
+padding: 10px;    
+}
+/*.Our Team*/
+.Team{
+position: relative;
+top: 42rem;       
+}
+.Team h3{
+text-align: center;
+padding: 20px;    
+}
+.all-team{
+display: flex;
+justify-content:space-evenly;   
+flex-flow: wrap;    
+}
+
+.img-circle{
+border-radius: 50%;     
+}
+/*BG-Price*/
+.bg-price{
+position: relative;
+top: 45rem;    
+}
+.menu{
+display: flex;
+flex-flow: wrap;
+align-items: center;    
+width: 100%;
+    height: 170px;
+    text-align: center;
+    color: #fff; 
+    font-weight: bold;
+    font-size: 2rem;
+}
+.single-price{
+    background-color: darkgreen;
+    width: 50%;
+    padding: 1em
+}
+.multiple-price{
+    background-color: lawngreen; 
+        width: 50%;
+        padding: 1em
+}
+.light{
+font-size: 1.2rem;
+font-weight: 100    
+}
+/*CONNECTED*/
+.contact{
+position: relative;
+top: 46rem;    
+}
+.contact>h3{
+text-align: center;
+padding-bottom: 2rem;    
+}
+.info{
+flex-flow: wrap;    
+display: flex;
+justify-content: space-around; 
+}
+.contact .spacing{
+padding: 1rem;    
+}
+/*FOOTER*/
+.footer {
+    background-color: forestgreen;
+    position: relative;
+top: 50rem;    
+}
+
+.footer p {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px;
+    color: #fff;
+    font-size: 10;
+}
